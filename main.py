@@ -8,6 +8,7 @@ import pandas as pd
 
 
 app = dash.Dash(__name__)
+server=app.server
 
 url = 'https://covid19.schoolkidrich.repl.co/api/state=cases'
 req = requests.get(url)
