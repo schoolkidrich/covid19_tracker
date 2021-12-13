@@ -92,6 +92,9 @@ def plot_daily(case_state, plot_type):
     fig = px.line(df, title=f'Daily Number of {plot_type} [{case_state}]',
                   x='date', y=plot_type.lower())
     fig.update_traces(line_color=color)
+    fig.update_layout({
+        'plot_bgcolor': 'rgba(0, 0, 0, 0)'
+    })
     return fig
 
 
@@ -112,6 +115,9 @@ def plot_cumulative(cumulative_state, plot_type2):
     fig = px.line(cumulative, title=f'Total Number of {plot_type2} [{cumulative_state}]',
                   x='date', y=plot_type2.lower())
     fig.update_traces(line_color=color)
+    fig.update_layout({
+        'plot_bgcolor': 'rgba(0, 0, 0, 0)'
+    })
     return fig
 
 
